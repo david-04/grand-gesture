@@ -1,79 +1,104 @@
-html{font-family: arial,sans-serif;}
-input[type=button]{
-	margin: 0 5px;
-	min-width: 80px;
-	min-height: 26px;
-	border-radius: 3px;
-	border: 1px solid #ccf;
-	box-shadow: 0 0 2px #ccf;
-}
-input[type=button]{
-	min-width: 100px;
-	height: 32px;
-	line-height: 32px;
-	font-weight: bold;
-	font-size: 1em;	
-	display: inline-block;
-	cursor: pointer;
-	text-align: center;
-	transition:background .2s ease-in-out;
-	color: #5677fc;
-	padding: 0 8px;
-	margin: 0 5px;
-	border-radius: 2px;
-	background: rgba(0, 0, 0, 0);
-	background-color: #fff;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-	border: none;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-input[type=button]:hover{
-	color: #fff;
-	background: #5677fc;
+html {
+    font-family: arial, sans-serif;
 }
 
-input[type=button]:active {
-	position: relative;
-	top: 1px;
-	background: rgba(86, 119, 252, 0.4); 
+input[type="button"] {
+    margin: 0 5px;
+    min-width: 80px;
+    min-height: 26px;
+    border-radius: 3px;
+    border: 1px solid #ccf;
+    box-shadow: 0 0 2px #ccf;
 }
-#perwrap{
-	width: 600px;
-	height: auto;
-	border-radius: 3px;
-	border: 1px solid #ccf;
-	/*padding: 5px;*/
-	margin: 80px auto;
-	box-shadow: 5px 5px 10px #ccf;
+
+input[type="button"] {
+    min-width: 100px;
+    height: 32px;
+    line-height: 32px;
+    font-weight: bold;
+    font-size: 1em;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    transition: background .2s ease-in-out;
+    color: #5677fc;
+    padding: 0 8px;
+    margin: 0 5px;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0);
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-#pertitle{
-	float: left;
-	height: 80px;
-	line-height: 80px;
-	padding-left: 20px;
-	font-size: 30px;
+
+input[type="button"]:hover {
+    color: #fff;
+    background: #5677fc;
 }
-#perlistbox{
-	border-top: #eee 1px solid;	
-	padding: 5px 10px;
+
+input[type="button"]:active {
+    position: relative;
+    top: 1px;
+    background: rgba(86, 119, 252, 0.4);
 }
-#perlist{
-	padding: 10px;
-	font-size: 18px;
-	font-weight: bold;
-	color: red;
+
+.text-content {
+    padding: 10px;
+    font-size: 16px;
 }
-#perbtnbox{
-	text-align: center;
-	padding: 10px 0;
+
+#perwrap {
+    width: 600px;
+    height: auto;
+    border-radius: 3px;
+    border: 1px solid #ccf;
+    margin: 80px;
+    box-shadow: 5px 5px 10px #ccf;
 }
-#perdes{
-	/*padding: 5px 10px 10px;*/
-	padding:0 10px;
-	color: #777;
-	font-size: 12px;
+
+#pertitle {
+    float: left;
+    height: 80px;
+    line-height: 80px;
+    padding-left: 20px;
+    font-size: 30px;
 }
-#per_msg{
-	font-size: 12px;
-	color: #444;
+
+#perlistbox {
+    padding: 5px 10px;
+}
+
+#perlist {
+    padding-top: 10px;
+    font-weight: bold;
+    color: red;
+}
+
+#perbtnbox {
+    margin: 15px 0 20px 5px;
+}
+
+#perdes {
+    padding: 0 10px;
+}
+
+#per_msg {
+}
+
+.grand-gesture-banner {
+    background-image: url("../image/grand-gesture-banner.jpg");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-size: auto 100%;
+    height: 100px;
+    width: calc(100% - 140px);
+    padding-left: 140px;
+    background-color: #020612;
+    color: white;
+    font-size: 1.9em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }

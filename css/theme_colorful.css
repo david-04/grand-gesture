@@ -1,9 +1,10 @@
-nav{
-	opacity: .95 !important;
+nav {
+    opacity: 0.95 !important;
 }
-menu,#main{
-	opacity: 1 !important;
+menu,
+#main {
+    opacity: 1 !important;
 }
-#top{
-	display: block;
+#top {
+    display: block;
 }

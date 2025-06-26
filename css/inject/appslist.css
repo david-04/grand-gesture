@@ -1,116 +1,116 @@
-smartup.su_apps#su_apps_appslist .su_appslist_box{
-	/*width: 500px;*/
-	padding: 8px;
+smartup.su_apps#su_apps_appslist .su_appslist_box {
+    /*width: 500px;*/
+    padding: 8px;
 }
-smartup.su_apps#su_apps_appslist ul{
-	/*padding: 10px;*/
-	width: 100%;
-	text-align: center;
-	padding-bottom: 8px;
+smartup.su_apps#su_apps_appslist ul {
+    /*padding: 10px;*/
+    width: 100%;
+    text-align: center;
+    padding-bottom: 8px;
 }
-smartup.su_apps#su_apps_appslist li{
-	margin: 1px;
+smartup.su_apps#su_apps_appslist li {
+    margin: 1px;
 }
-smartup.su_apps#su_apps_appslist li>div{
-	box-sizing: border-box;
-	border: 1px solid rgba(204, 204, 255, 0.6);
-	padding: 0 5px;
-	/*margin: 1px;*/
-	font-size: 14px;
-	font-weight: bold;
-	font-size: 14px;
-	color: rgba(0, 0, 0, 0.7);
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	cursor: pointer;
-	transition:all .4s ease-in-out;
-	width: 160px;
-	border-radius: 5px;
-	height: 32px;
-	line-height: 32px;
-	display: inline-block;
-	text-align: left;
+smartup.su_apps#su_apps_appslist li > div {
+    box-sizing: border-box;
+    border: 1px solid rgba(204, 204, 255, 0.6);
+    padding: 0 5px;
+    /*margin: 1px;*/
+    font-size: 14px;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    width: 160px;
+    border-radius: 5px;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    text-align: left;
 }
-smartup.su_apps#su_apps_appslist li>div:hover{
-	box-shadow: 0px 1px 3px #ccc;
-	background: #d0d9ff;
-	border-color: rgba(86,119,252,.5) !important;
+smartup.su_apps#su_apps_appslist li > div:hover {
+    box-shadow: 0px 1px 3px #ccc;
+    background: #d0d9ff;
+    border-color: rgba(86, 119, 252, 0.5) !important;
 }
-smartup.su_apps#su_apps_appslist li img{
-	width: 16px;
-	margin-right: 5px;
+smartup.su_apps#su_apps_appslist li img {
+    width: 16px;
+    margin-right: 5px;
 }
-smartup.su_apps#su_apps_appslist li span{
-	display: inline-block;
-	width: 372px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
+smartup.su_apps#su_apps_appslist li span {
+    display: inline-block;
+    width: 372px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
-smartup.su_apps#su_apps_appslist .su_appslist_editmode{
-	background-color: red;
+smartup.su_apps#su_apps_appslist .su_appslist_editmode {
+    background-color: red;
 }
-smartup.su_apps#su_apps_appslist .su_appslist_ulenabled{
-	width: 487px;
+smartup.su_apps#su_apps_appslist .su_appslist_ulenabled {
+    width: 487px;
 }
-smartup.su_apps#su_apps_appslist .su_appslist_ulenabled_before{
-	width: 496px;
-	float: left;
-	border: 1px solid #cccccc30;
-	border-radius: 2px;
-	padding: 4px;
-	margin-bottom: 8px;
+smartup.su_apps#su_apps_appslist .su_appslist_ulenabled_before {
+    width: 496px;
+    float: left;
+    border: 1px solid #cccccc30;
+    border-radius: 2px;
+    padding: 4px;
+    margin-bottom: 8px;
 }
-smartup.su_apps#su_apps_appslist .su_appslist_ulenabled_before::before{
-	/*content: "enabled lists:";*/
-	content: "__MSG_appslist_listenabled__";
-	float: left;
-	display: block;
-	width: 100%;
-	padding: 2px 0;
+smartup.su_apps#su_apps_appslist .su_appslist_ulenabled_before::before {
+    /*content: "enabled lists:";*/
+    content: "__MSG_appslist_listenabled__";
+    float: left;
+    display: block;
+    width: 100%;
+    padding: 2px 0;
 }
-smartup.su_apps#su_apps_appslist .su_appslist_ulenabled_before::after{
-	/*content: "enabled lists:";*/
-	content: "__MSG_appslist_desenabled__";
-	float: left;
-	display: block;
-	width: 100%;
-	padding: 2px 0;
-	text-align: left;
-	color: #ccc;
-	font-size: 12px;
+smartup.su_apps#su_apps_appslist .su_appslist_ulenabled_before::after {
+    /*content: "enabled lists:";*/
+    content: "__MSG_appslist_desenabled__";
+    float: left;
+    display: block;
+    width: 100%;
+    padding: 2px 0;
+    text-align: left;
+    color: #ccc;
+    font-size: 12px;
 }
-smartup.su_apps#su_apps_appslist .su_appslist_uldisabled{
-	width: 335px;
-	min-height: 160px;
-	border: 1px solid #cccccc30;
-	border-radius: 2px;
-	padding: 4px;
-	margin-left: 4px;
-	margin-bottom: 8px;
-	background-color: #cccccc52;
+smartup.su_apps#su_apps_appslist .su_appslist_uldisabled {
+    width: 335px;
+    min-height: 160px;
+    border: 1px solid #cccccc30;
+    border-radius: 2px;
+    padding: 4px;
+    margin-left: 4px;
+    margin-bottom: 8px;
+    background-color: #cccccc52;
 }
-smartup.su_apps#su_apps_appslist .su_appslist_uldisabled::before{
-	content: "__MSG_appslist_listdisabled__";
-	float: left;
-	display: block;
-	width: 100%;
-	padding: 2px;
-	/*background-color: #ccc;*/
+smartup.su_apps#su_apps_appslist .su_appslist_uldisabled::before {
+    content: "__MSG_appslist_listdisabled__";
+    float: left;
+    display: block;
+    width: 100%;
+    padding: 2px;
+    /*background-color: #ccc;*/
 }
-smartup.su_apps#su_apps_appslist .su_appslist_uldisabled::after{
-	content: "__MSG_appslist_desdisabled__";
-	float: left;
-	display: block;
-	width: 100%;
-	padding: 2px;
-	text-align: left;
-	color: #ccc;
-	font-size: 12px;
-	/*background-color: #ccc;*/
+smartup.su_apps#su_apps_appslist .su_appslist_uldisabled::after {
+    content: "__MSG_appslist_desdisabled__";
+    float: left;
+    display: block;
+    width: 100%;
+    padding: 2px;
+    text-align: left;
+    color: #ccc;
+    font-size: 12px;
+    /*background-color: #ccc;*/
 }
-smartup.su_apps#su_apps_appslist .su_sortable_item>div{
-	border: 1px dashed #ccc;
-	background: #cccccc33;
+smartup.su_apps#su_apps_appslist .su_sortable_item > div {
+    border: 1px dashed #ccc;
+    background: #cccccc33;
 }

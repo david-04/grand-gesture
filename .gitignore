@@ -1,0 +1,5 @@
+/.vscode
+/node_modules
+/dist
+/resources/hero-image-*.png
+!/resources/hero-image-github-readme-banner.png

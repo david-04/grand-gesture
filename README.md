@@ -1,40 +1,122 @@
-![https://img.shields.io/github/issues/zimocode/smartup](https://user-images.githubusercontent.com/29518677/113705830-7c8fc580-9710-11eb-9b75-f2eddd761590.png)
+![](resources/hero-image-github-readme-banner.jpg)
 
-# smartUp Gestures 
+Grand Gesture is the most comprehensive mouse gesture extension for Chrome, featuring mouse gestures, super drag, rocker gestures, wheel gestures, and more. It's a fork of the discontinued [smartUp Gestures](https://github.com/zimocode/smartup) extension by [zimocode](https://github.com/zimocode).
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/zimocode/smartup?logo=github&logoColor=white)
-![GitHub Repo stars](https://img.shields.io/github/stars/zimocode/smartup?logo=github&logoColor=white)
-![GitHub forks](https://img.shields.io/github/forks/zimocode/smartup?logo=github&logoColor=white)
-![GitHub issues](https://img.shields.io/github/issues-raw/zimocode/smartup?logo=github&logoColor=white)
-![GitHub](https://img.shields.io/github/license/zimocode/smartup?logo=github&logoColor=white)
+# Gestures
 
-|  Browser  | Rating  | Users |
-|  ----  | ----  | ---- |
-| Chrome | ![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/bgjfekefhjemchdeigphccilhncnjldn?logo=google%20chrome&logoColor=white) | ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/bgjfekefhjemchdeigphccilhncnjldn?logo=google%20chrome&logoColor=white) | 
-| Firefox | ![Mozilla Add-on](https://img.shields.io/amo/rating/smartup?logo=firefox&logoColor=white) | ![Mozilla Add-on](https://img.shields.io/amo/users/smartup?logo=firefox&logoColor=white) | 
+Actions can be triggered through the following gestures:
 
-Visit on [Chrome Web Store](https://chrome.google.com/webstore/detail/bgjfekefhjemchdeigphccilhncnjldn) / [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/smartup/) / [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/smartup%E6%89%8B%E5%8A%BF/elponhbfjjjihgeijofonnflefhcbckp)
+- Mouse gestures (draw a line on the screen)
 
-A customizable web browser mouse gestures extension with a variety of actions. Features include: mouse gestures, simple drag, super drag, rocker gestures, wheel gestures,Popup Actions, Icon Actions, Context Menu actions, Touch Gestures, Double Click Action and Keyboard Shortcut Actions.
+- Super drag (drag selected text, links, and images)
 
-[English](README.md) ·[简体中文](README-zh_CN.md)
+- Rocker gestures (click a mouse button while holding down the other one)
 
-## Leatest release
+- Wheel gestures (use the scroll wheel while holding down a mouse button)
+- Click on the extension icon in the browser's toolbar
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/zimocode/smartup?logo=github&logoColor=white)
+- Context menu
+- Touch gestures
+- Double-click
+- Keyboard shortcuts
 
-## Install
+# Actions
 
-### Install by online
+- Navigation
+  - Go to the previous or next page (based on the browser history, by following the previous/next links on the page, or by incrementing/decrementing the number in the URL)
+  - Go to the parent page (by removing the last path segment from the URL)
+  - Reload the page
+  - Stop loading the page
+  - Open a URL (using either a configurable/fixed URL or the one from the clipboard)
 
-smartUP Gestures has ben uploaded to these browser's extension store, you'll install it quickly.
+- Tabs
+  - Close one or more tabs
+  - Open a new tab
+  - Switch to the previous/first/last/left/right tab
+  - Re-open the previously closed tab
+  - Move the current tab to the left/right/start/end
+  - Detach one or more tabs into a new window
+  - Pin/unpin one or more tabs
+  - Duplicate one or more tabs
+  - Reopen the current tab in an incognito window
+- Windows
+  - Open a new window
+  - Close one or more windows
+  - Minimize/maximize the current window
+  - Merge (the tabs of) all windows into a single window
+- Text operations (triggered by dragging selected text)
+  - Copy the selected text to the clipboard
+  - Search the selected text (or the text from the clipboard) via a search engine
+  - Create a QR code for the selected text
+  - Read the selected text aloud (text-to-speech)
+- Link operations (triggered by dragging a link)
+  - Open a link
+  - Bookmark a link
+  - Copy a link's URL, text, or HTML code to the clipboard
+  - Create a QR code for a link
+  - Save a link
+- Image operations (triggered by dragging an image)
+  - Open an image
+  - Save an image (with or without prompting for a file name/location)
+  - Copy an image or its URL to the clipboard
+  - Search similar images via a search engine
+- Settings
+  - Open the Chrome settings
+  - Open the Grand Gesture settings
+  - Reload Grand Gesture
+  - Temporarily disable Grand Gesture in the current tab
+- Miscellaneous operations
+  - Run custom JavaScript code
+  - Copy the page title or URL to the clipboard
+  - Bookmark the current page
+  - View the page source
+  - Save the page
+  - Print the page
+  - Take a screenshot
+  - Open the downloads folder
+  - Toggle fullscreen mode
+  - Mute one or more tabs
+  - Paste text
+  - Scroll up/down/left/right or to the start/end
+  - Zoom in/out or reset the zoom
+  - Create an email with a link to the current page
 
-|  Browser  | URL  |
-|  ----  | ----  |
-| Chrome | [https://chrome.google.com/webstore/detail/bgjfekefhjemchdeigphccilhncnjldn](https://chrome.google.com/webstore/detail/bgjfekefhjemchdeigphccilhncnjldn) |
-| Edge | [https://microsoftedge.microsoft.com/addons/detail/elponhbfjjjihgeijofonnflefhcbckp](https://microsoftedge.microsoft.com/addons/detail/elponhbfjjjihgeijofonnflefhcbckp) |
-| Firefox | [https://addons.mozilla.org/firefox/addon/smartup/](https://addons.mozilla.org/firefox/addon/smartup/) |
+# Targets
 
-## License
+Operations for tabs (e.g., reload, close, mute, ...) can be applied to:
 
-[![License](https://img.shields.io/github/license/zimocode/smartup?logo=github&logoColor=white)](LICENSE)
+- The current tab
+- All tabs
+- All tabs except the current tab
+- The (single) tab to the left/right of the current tab
+- All tabs to the left/right of the current tab
+- The current tab and all tabs to its left/right
+- The first/last tab
+
+Operations that open a URL (e.g., open a link, view an image, search selected text, ...) can open in:
+
+- The current tab
+- A new foreground or background tab
+- A new foreground or background window
+- An incognito window
+
+# Mini apps
+
+Grand Gesture also contains widgets (called "mini apps") that can be opened on any website:
+
+- List items (to open or switch to)
+  - Currently open tabs
+  - Recent history (previously viewed/opened websites)
+  - Recently closed tabs
+  - Bookmarks
+  - Synced tabs
+- Conversion
+  - Convert between lowercase and uppercase
+  - Convert a torrent hash to a magnet URI
+  - Convert between numeral systems (binary, octal, decimal, hex, ...)
+  - Encode and decode base64
+  - Generate random numbers
+- Miscellaneous
+  - Periodically auto-reload the current page
+  - RSS
+  - List (and run) custom scripts
