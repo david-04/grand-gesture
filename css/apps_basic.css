@@ -8,7 +8,7 @@ smartup.su_apps a {
     font-family: inherit;
     font-family: arial, sans-serif;
     font-size: 14px;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 smartup.su_apps div {
     box-sizing: content-box;
@@ -46,7 +46,7 @@ smartup.su_apps button {
     display: inline-block;
     cursor: pointer;
     text-align: center;
-    transition: background .2s ease-in-out;
+    transition: background 0.2s ease-in-out;
     color: #5677fc;
     padding: 0 8px;
     margin: 0 5px;
@@ -175,7 +175,7 @@ smartup .su_btn_close {
     cursor: pointer;
     text-align: center;
     font-family: arial, sans-serif;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     -webkit-user-select: none !important;
     user-select: none !important;
 }
@@ -207,7 +207,7 @@ smartup .su_menu img {
     padding: 2px;
 }
 smartup .su_options {
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     position: absolute;
     left: 0;
     top: 0;

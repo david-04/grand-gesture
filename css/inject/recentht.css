@@ -24,7 +24,7 @@ smartup.su_apps#su_apps_recentht li {
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 smartup.su_apps#su_apps_recentht li img {
     width: 16px;
@@ -49,6 +49,6 @@ smartup.su_apps#su_apps_recentht li span {
     text-overflow: ellipsis;
 }
 smartup.su_apps#su_apps_recentht li:hover .li_0 {
-    transition: all .4s ease-out;
+    transition: all 0.4s ease-out;
     margin-top: -32px;
 }

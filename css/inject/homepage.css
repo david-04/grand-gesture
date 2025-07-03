@@ -46,7 +46,7 @@ smartup.su_apps#su_apps_homepage .su_homepage_li div {
     border-radius: 2px;
     border: 1px solid #ccf;
     background-color: rgba(255, 255, 255, 0.7);
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 smartup.su_apps#su_apps_homepage .su_homepage_li div:hover {
     background-color: rgba(255, 255, 255, 0.9);
@@ -83,7 +83,7 @@ smartup.su_apps#su_apps_homepage .su_homepage_listul {
     margin: 0 0 0 -8px;
     padding: 2px 0;
     background: #e7e9fd;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     opacity: 1;
 
     position: absolute;
@@ -95,10 +95,10 @@ smartup.su_apps#su_apps_homepage .su_homepage_listul {
     margin: 0;
 }
 smartup.su_apps#su_apps_homepage .su_homepage_list {
-    transition: all .4s ease-out;
+    transition: all 0.4s ease-out;
 }
 smartup.su_apps#su_apps_homepage .su_homepage_list:hover {
-    transition: all .4s ease-out;
+    transition: all 0.4s ease-out;
     background: #a6baff;
     color: #3f51b5;
 }
@@ -127,7 +127,7 @@ smartup.su_apps#su_apps_homepage .su_homepage_listlicur {
     background: #a6baff;
     color: #3f51b5;
     /*border-right: 3px solid #5677fc !important;*/
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
 }
 smartup.su_apps#su_apps_homepage .su_homepage_listlicur {
     color: #3f51b5;
@@ -185,7 +185,7 @@ smartup.su_apps#su_apps_homepage .su_homepage_itemadd {
     border-radius: 2px;
     border: 1px solid #ccf;
     background-color: rgba(255, 255, 255, 0.7);
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 smartup.su_apps#su_apps_homepage .su_homepage_itemadd:hover {
     background-color: rgba(255, 255, 255, 0.9);
@@ -205,7 +205,7 @@ smartup.su_apps#su_apps_homepage .su_homepage_itemaddbox {
     border-radius: 2px;
 }
 smartup.su_apps#su_apps_homepage .su_homepage_itembtndel {
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     float: right;
     margin: -34px -44px 0 0 !important;
     width: 36px;
@@ -237,7 +237,7 @@ smartup.su_apps#su_apps_homepage .su_homepage_addboxbtn {
     margin: 8px 0;
 }
 smartup.su_apps#su_apps_homepage .su_homepage_listbtndel {
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     float: left;
     width: 24px;
     text-align: center;

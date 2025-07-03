@@ -66,7 +66,7 @@ smartup.su_apps#su_apps_notepad .su_notepad_litext {
     display: none;
 }
 smartup.su_apps#su_apps_notepad .su_notepad_liedit {
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     float: left;
     width: 24px;
     text-align: center;
@@ -86,7 +86,7 @@ smartup.su_apps#su_apps_notepad .su_notepad_li > div:hover .su_notepad_liedit {
 /*==================================================*/
 smartup.su_apps#su_apps_notepad .su_notepad_lidel {
     /*position: absolute;*/
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     float: left;
     width: 24px;
     text-align: center;

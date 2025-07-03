@@ -190,7 +190,7 @@ smartup.su_apps#su_apps_tbkjx .su_tbkjx_listjing li {
     line-height: 32px;
     /*font-weight: bold;*/
     cursor: pointer;
-    transition: all .1s ease-in-out;
+    transition: all 0.1s ease-in-out;
     /**/
     width: 206px;
 }

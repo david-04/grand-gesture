@@ -61,7 +61,7 @@ smartup.su_apps#su_apps_rss .rss_box li {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 smartup.su_apps#su_apps_rss li:hover {
     text-decoration: none;
@@ -109,7 +109,7 @@ smartup.su_apps#su_apps_rss .rss_sub .sub_items li {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 smartup.su_apps#su_apps_rss .sub_item:hover .sub_itemdel {
@@ -120,7 +120,7 @@ smartup.su_apps#su_apps_rss .sub_item:hover .sub_itemdel {
 smartup.su_apps#su_apps_rss .sub_itemdel {
     opacity: 0;
     background: rgba(0, 0, 0, 0.8);
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 
     position: absolute;
     float: right;

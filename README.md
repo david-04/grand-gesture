@@ -1,6 +1,12 @@
 ![](resources/hero-image-github-readme-banner.jpg)
 
-Grand Gesture is the most comprehensive mouse gesture extension for Chrome, featuring mouse gestures, super drag, rocker gestures, wheel gestures, and more. It's a fork of the discontinued [smartUp Gestures](https://github.com/zimocode/smartup) extension by [zimocode](https://github.com/zimocode).
+Grand Gesture is the most comprehensive mouse gesture extension for Chrome, featuring mouse gestures, super drag, rocker gestures, wheel gestures, and more. 
+
+This project is a fork of the discontinued [smartUp Gestures](https://github.com/zimocode/smartup) extension by [zimocode](https://github.com/zimocode).
+
+# Installation
+
+[Get it from the Chrome Web Store](https://chromewebstore.google.com/detail/grand-gesture/kmdhnmlelcmpeafnienldlcfchkkajfb)
 
 # Gestures
 

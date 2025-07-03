@@ -6,7 +6,7 @@ body {
     padding: 0;
     font-family: arial, sans-serif;
     font-size: 13px;
-    transition: background .4s ease-in-out;
+    transition: background 0.4s ease-in-out;
 }
 body ul {
     min-width: 160px;
@@ -35,7 +35,7 @@ select {
 .menu_item {
     min-height: 32px;
     line-height: 32px;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

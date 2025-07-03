@@ -46,7 +46,7 @@ body {
     padding: 0;
     font-family: arial, sans-serif;
     font-size: 16px;
-    transition: background .4s ease-in-out;
+    transition: background 0.4s ease-in-out;
 }
 
 a:visited {
@@ -112,7 +112,7 @@ input[type="range"]::-ms-thumb {
     top: 0;
     z-index: 100;
     background: rgba(0, 0, 0, 0.7);
-    transition: all .9s ease-in-out;
+    transition: all 0.9s ease-in-out;
 }
 
 #welcome {
@@ -142,7 +142,7 @@ input[type="range"]::-ms-thumb {
 }
 
 #top {
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 nav {
@@ -215,7 +215,7 @@ nav #nav_txt {
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     margin-top: 16px;
 }
 
@@ -288,7 +288,7 @@ menu {
     z-index: 105;
     opacity: 1;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.26);
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 menu #pin {
@@ -298,7 +298,7 @@ menu #pin {
     top: 60px;
     opacity: 0.5;
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 menu #pin:hover {
@@ -312,7 +312,7 @@ menu #menu_logo {
     display: block;
     margin: 10px;
     margin-left: 0;
-    transition: all .8s ease-in;
+    transition: all 0.8s ease-in;
 }
 
 menu #menu_name {
@@ -325,7 +325,7 @@ menu #menu_name {
     padding: 10px;
     display: none;
     opacity: 0;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 menu #menu_topbox {
@@ -340,7 +340,7 @@ menu #menu_bottom {
     position: absolute;
     bottom: 0;
     /*background: #ffeb3b;*/
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 menu #menu_bottom img {
@@ -376,7 +376,7 @@ menu #menu_bottom:hover img {
     padding: 0;
     background: rgba(0, 0, 0, 0.26);
     z-index: 101;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 #btn_add,
@@ -396,7 +396,7 @@ menu #menu_bottom:hover img {
     cursor: pointer;
     z-index: 2;
     color: #d0d9ff;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     /*---------*/
     position: absolute;
     display: block;
@@ -429,7 +429,7 @@ menu #menu_bottom:hover img {
 
 .btn_engine,
 .btn_script {
-    transition: background .2s ease-in-out;
+    transition: background 0.2s ease-in-out;
     width: 40px !important;
     padding: 0 !important;
     background: #5677fc;
@@ -461,7 +461,7 @@ smartup.su_apps {
     border: 1px solid #5677fc;
     border-radius: 2px;
     opacity: 0;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     -moz-user-select: none;
     user-select: none;
 }
@@ -504,7 +504,7 @@ smartup.su_apps {
     cursor: pointer;
     text-align: center;
     font-family: arial, sans-serif;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     user-select: none !important;
     -moz-user-select: none !important;
 }
@@ -614,7 +614,7 @@ smartup.su_apps {
     border-radius: 100%;
     padding: 3px;
     background: rgba(255, 255, 255, 0.33);
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     height: 16px;
 }
 
@@ -632,7 +632,7 @@ smartup.su_apps {
     position: fixed;
     left: 0;
     top: 0;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .item {
@@ -656,7 +656,7 @@ smartup.su_apps {
 
 .item:hover {
     background: #5677fc;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     color: #fff;
     font-weight: bold;
     border: 1px solid transparent;
@@ -674,7 +674,7 @@ smartup.su_apps {
     position: relative;
     visibility: visible;
     opacity: 1;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     left: 0;
     top: -36px;
 }
@@ -697,7 +697,7 @@ smartup.su_apps {
     color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.3);
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     position: relative;
     right: -30px;
     top: 4px;
@@ -745,7 +745,7 @@ smartup.su_apps {
     top: 0px;
     height: 14px;
     line-height: 14px;
-    transition: top .6s ease-in-out;
+    transition: top 0.6s ease-in-out;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -808,7 +808,7 @@ smartup.su_apps {
         color-stop(0.1, #6a7786),
         color-stop(0.5, #5e6977),
         color-stop(0.9, #56616d),
-        color-stop(1.0, #545e6a)
+        color-stop(1, #545e6a)
     );
 
     /* font-size: 14px; */
@@ -833,7 +833,7 @@ smartup.su_apps {
         color-stop(0.1, #6a7786),
         color-stop(0.5, #5e6977),
         color-stop(0.9, #56616d),
-        color-stop(1.0, #545e6a)
+        color-stop(1, #545e6a)
     );
 
     /* font-size: 14px; */
@@ -882,7 +882,7 @@ smartup.su_apps {
     padding: 0;
     padding-bottom: 5px;
     z-index: 10;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     background-color: rgba(255, 255, 255, 1);
     color: rgba(0, 0, 0);
     box-shadow: 0 1px 4px 3px rgba(0, 0, 0, 0.3);
@@ -899,7 +899,7 @@ smartup.su_apps {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .menupluscontent li:hover {
@@ -945,7 +945,7 @@ smartup.su_apps {
         color-stop(0.1, #6a7786),
         color-stop(0.5, #5e6977),
         color-stop(0.9, #56616d),
-        color-stop(1.0, #545e6a)
+        color-stop(1, #545e6a)
     );
 }
 
@@ -998,7 +998,7 @@ smartup.su_apps {
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     cursor: pointer;
-    transition: background .4s ease-out;
+    transition: background 0.4s ease-out;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1017,7 +1017,7 @@ smartup.su_apps {
     margin: -2px 0;
     padding: 2px 0;
     background: #e7e9fd;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     opacity: 1;
 }
 
@@ -1040,7 +1040,7 @@ smartup.su_apps {
 }
 
 .menuli {
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .menuul li:hover {
@@ -1063,7 +1063,7 @@ smartup.su_apps {
 #content {
     width: 100%;
     background-color: #fff;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     height: 100%;
 }
 
@@ -1329,7 +1329,7 @@ smartup.su_apps {
 }
 
 .box-close {
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .box-close,
@@ -1469,7 +1469,7 @@ smartup.su_apps {
     margin-left: 20px;
     border-radius: 5px;
     border: 1px solid transparent;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .uibox:hover {
@@ -1604,7 +1604,7 @@ input[type="button"] {
     display: inline-block;
     cursor: pointer;
     text-align: center;
-    transition: background .2s ease-in-out;
+    transition: background 0.2s ease-in-out;
     color: #5677fc;
     padding: 0 8px;
     margin: 0 5px;
@@ -1756,7 +1756,7 @@ select:hover {
     top: 0;
     padding-top: 100px;
     z-index: 100;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 #trash {
@@ -1790,7 +1790,7 @@ select:hover {
     margin: 1px;
     padding: 1px 10px;
     border-radius: 3px;
-    transition: all .8s ease-in-out;
+    transition: all 0.8s ease-in-out;
     text-align: left;
     border-right: 1px solid #ccf;
 }
@@ -1928,7 +1928,7 @@ summary:hover {
     display: inline-block;
     cursor: pointer;
     text-align: center;
-    transition: background .2s ease-in-out;
+    transition: background 0.2s ease-in-out;
     color: #5677fc;
     padding: 0 8px;
     margin: 0 5px;
@@ -1988,7 +1988,7 @@ summary:hover {
 .darg_new {
     /*width: 0 !important;*/
     /*height: 0 !important;*/
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     background-color: #fff;
 }
 
@@ -2200,7 +2200,7 @@ smartup.su_apps {
     margin-left: 16px;
     border-radius: 4px;
     border-left: 1px solid #ccc0;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .box_radio:hover,
@@ -2265,7 +2265,7 @@ smartup.su_apps {
 .box_radiolist,
 .box_checklist {
     display: none;
-    transition: background .4s ease-in-out;
+    transition: background 0.4s ease-in-out;
 }
 
 /*////////////*/
@@ -2277,7 +2277,7 @@ smartup.su_apps {
     border-radius: 2px;
     /*border: 1px solid #fff0;*/
     background-color: #00000008;
-    transition: background .4s ease-in-out;
+    transition: background 0.4s ease-in-out;
 }
 
 .exclusionwrap:hover {
@@ -2290,7 +2290,7 @@ smartup.su_apps {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    transition: background .4s ease-in-out;
+    transition: background 0.4s ease-in-out;
 }
 
 .exclusionwrap > li:hover {
@@ -2317,7 +2317,7 @@ smartup.su_apps {
     line-height: 16px;
     text-align: center;
     opacity: 0;
-    transition: background .4s ease-in-out;
+    transition: background 0.4s ease-in-out;
 }
 
 .exclusionwrap > li > span:hover {

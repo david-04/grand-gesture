@@ -18,7 +18,7 @@ smartup.su_apps#su_apps_jslist li > div {
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     border-radius: 5px;
     width: 160px;
     height: 32px;

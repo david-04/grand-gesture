@@ -27,7 +27,7 @@ smartup.su_apps#su_apps_tablist li {
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     background-repeat: no-repeat;
     background-position: 6px 6px;
     background-size: 16px;

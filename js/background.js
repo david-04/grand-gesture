@@ -1357,8 +1357,8 @@ var sub = {
             case "normal":
                 break;
             case "warning":
-                await chrome.action.setIcon({ tabId: tab.id, path: "../image/grand-gesture-icon-016-gray.png" });
-                await chrome.action.setTitle({ tabId: tab.id, title: sub.getI18n("icon_tip") });
+                await chrome.action.setIcon({ tabId, path: "../image/grand-gesture-icon-016-gray.png" });
+                await chrome.action.setTitle({ tabId, title: sub.getI18n("icon_tip") });
                 break;
         }
     },
@@ -1396,11 +1396,15 @@ var sub = {
         //group nav
         back: async () => {
             //chk
-            await chrome.tabs.goBack();
+            try {
+                await chrome.tabs.goBack();
+            } catch {}
         },
         forward: async () => {
             //chk
-            await chrome.tabs.goForward();
+            try {
+                await chrome.tabs.goForward();
+            } catch {}
         },
         scroll: async () => {
             var _effect = sub.getConfValue("checks", "n_effect"),
@@ -3997,13 +4001,13 @@ var sub = {
         } else {
             console.log("-->", message);
         }
-        const sendResponse = (...params) => {
+        const sendResponse = async (...params) => {
             if (params[0].type && 1 === params.length) {
                 console.log("<--", { type: params[0].type, message: params[0] });
             } else {
                 console.log("<--", ...params);
             }
-            _sendResponse(...params);
+            await _sendResponse(...params);
         };
         sub.message = message;
         const getConf = () => {
@@ -5193,23 +5197,21 @@ async function main() {
 
     chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
         try {
-            await sub.setIcon("normal", tabId, changeInfo, tab);
-            if (changeInfo.status === "complete") {
-                for (let response = undefined; !response; ) {
-                    try {
-                        response = await chrome.tabs.sendMessage(tabId, { type: "status" });
-                        if (!response) {
-                            await sub.setIcon("warning", tabId, changeInfo, tab);
-                        }
-                    } catch (error) {
-                        await new Promise(resolve => setTimeout(resolve, 100));
-                    }
-                }
-            }
             // get factor for action zoom
             sub.temp.zoom[tabId] = await chrome.tabs.getZoom(tabId);
+            await sub.setIcon("normal", tabId, changeInfo, tab);
+            if (changeInfo.status === "complete") {
+                let response = await chrome.tabs.sendMessage(tabId, { type: "status" });
+                if (!response) {
+                    await sub.setIcon("warning", tabId, changeInfo, tab);
+                }
+            }
         } catch (error) {
-            if (!(error instanceof Error) || error.message.indexOf("No tab with id") < 0) {
+            if (
+                !(error instanceof Error) ||
+                (error.message.indexOf("No tab with id") < 0 &&
+                    error.message.indexOf("Receiving end does not exist") < 0)
+            ) {
                 throw error;
             }
         }
@@ -5222,12 +5224,12 @@ async function main() {
         }
     });
 
-    chrome.runtime.onMessageExternal.addListener((message, sender, sendResponse) => {
-        sub.funOnMessage(message, sender, sendResponse);
+    chrome.runtime.onMessageExternal.addListener(async (message, sender, sendResponse) => {
+        await sub.funOnMessage(message, sender, sendResponse);
     });
 
-    chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-        sub.funOnMessage(message, sender, sendResponse);
+    chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
+        await sub.funOnMessage(message, sender, sendResponse);
     });
 
     //browsersettings

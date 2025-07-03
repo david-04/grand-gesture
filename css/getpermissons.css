@@ -20,7 +20,7 @@ input[type="button"] {
     display: inline-block;
     cursor: pointer;
     text-align: center;
-    transition: background .2s ease-in-out;
+    transition: background 0.2s ease-in-out;
     color: #5677fc;
     padding: 0 8px;
     margin: 0 5px;

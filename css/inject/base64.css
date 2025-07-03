@@ -12,7 +12,7 @@ smartup.su_apps#su_apps_base64 .base_code {
     top: 8px;
     background-color: #fff;
     padding-bottom: 8px;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 smartup.su_apps#su_apps_base64 .base_areastr,
 smartup.su_apps#su_apps_base64 .base_areacode {

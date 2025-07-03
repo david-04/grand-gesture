@@ -19,7 +19,7 @@ smartup.su_apps#su_apps_extmgm .su_extmgm li {
     cursor: pointer;
     list-style-type: none;
     text-align: left;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     background-repeat: no-repeat;
     background-position: 3px center;
 }
@@ -78,7 +78,7 @@ smartup.su_apps#su_apps_extmgm .su_extmgm_itemli > div {
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     border-radius: 5px;
     width: 160px;
     height: 48px;
@@ -97,7 +97,7 @@ smartup.su_apps#su_apps_extmgm .su_extmgm_itemli > div:hover {
 smartup.su_apps#su_apps_extmgm .su_extmgm_itemli > div:hover .su_extmgm_itemname {
     height: 24px;
     line-height: 24px;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 smartup.su_apps#su_apps_extmgm .su_extmgm_itemli img {
     height: 42px;
@@ -116,10 +116,10 @@ smartup.su_apps#su_apps_extmgm .su_extmgm_itemname {
     height: 48px;
     line-height: 48px;
     /*margin-top: 8px;*/
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 smartup.su_apps#su_apps_extmgm .su_extmgm_itemaction {
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 smartup.su_apps#su_apps_extmgm .su_extmgm_itemaction img {
     height: 16px;
@@ -173,7 +173,7 @@ smartup.su_apps#su_apps_extmgm .su_extmgm_moreul {
 }
 smartup.su_apps#su_apps_extmgm .su_extmgm_groupli > div:hover,
 smartup.su_apps#su_apps_extmgm .su_extmgm_moreli > div:hover {
-    transition: all .4s ease-out;
+    transition: all 0.4s ease-out;
     background: #a6baff;
     color: #3f51b5;
 }
@@ -222,7 +222,7 @@ smartup.su_apps#su_apps_extmgm .su_extmgm_groupaddbtn:hover {
     cursor: pointer;
 }
 smartup.su_apps#su_apps_extmgm .su_extmgm_groupdel {
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     float: left;
     width: 24px;
     text-align: center;
@@ -245,7 +245,7 @@ smartup.su_apps#su_apps_extmgm .su_extmgm_groupli > div:hover .su_extmgm_groupde
     background-color: red;
 }
 smartup.su_apps#su_apps_extmgm .su_extmgm_groupedit {
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     float: left;
     width: 24px;
     text-align: center;
@@ -271,6 +271,6 @@ smartup.su_apps#su_apps_extmgm .su_extmgm_morelicur > div,
 smartup.su_apps#su_apps_extmgm .su_extmgm_grouplicur > div {
     background: #a6baff;
     color: #3f51b5;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     font-weight: bold;
 }

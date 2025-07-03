@@ -28,7 +28,7 @@ smartup.su_apps#su_apps_qr .qr_outputbox {
     /*width: 240px;*/
     position: absolute;
     background-color: #fff;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     padding: 4px;
     border: 1px solid #ccc5;
     border-radius: 2px;

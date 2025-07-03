@@ -1237,11 +1237,21 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         sendResponse({});
     }
 });
-chrome.runtime.sendMessage(extID, { type: "evt_getconf" }, response => {
-    if (response) {
-        config = response.config;
-        devMode = response.devMode;
-        sue.cons.os = response.os;
-        sue.init();
+
+async function main() {
+    for (; ; await new Promise(resolve => setTimeout(resolve, 200))) {
+        try {
+            chrome.runtime.sendMessage(extID, { type: "evt_getconf" }, response => {
+                if (response) {
+                    config = response.config;
+                    devMode = response.devMode;
+                    sue.cons.os = response.os;
+                    sue.init();
+                }
+            });
+            return;
+        } catch {}
     }
-});
+}
+
+main();

@@ -24,7 +24,7 @@ smartup.su_apps#su_apps_recentbk li {
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 smartup.su_apps#su_apps_recentbk li > span {
     display: block;
@@ -56,6 +56,6 @@ smartup.su_apps#su_apps_recentbk li span {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    transition: all .4s ease-out;
+    transition: all 0.4s ease-out;
     display: block;
 }
