@@ -1,0 +1,249 @@
+#-----------------------------------------------------------------------------------------------------------------------
+#
+#    ##     ## ######## ##       ########
+#    ##     ## ##       ##       ##     ##
+#    ##     ## ##       ##       ##     ##
+#    ######### ######   ##       ########
+#    ##     ## ##       ##       ##
+#    ##     ## ##       ##       ##
+#    ##     ## ######## ######## ##
+#
+#-----------------------------------------------------------------------------------------------------------------------
+
+$(if $(call lp.bundle.is-enabled     ), $(call lp.help.add-builtin-target, bundle ............., bundle))
+$(if $(call lp.clean.is-enabled      ), $(call lp.help.add-builtin-target, clean .............., clean ))
+$(if $(call lp.tsc.is-enabled        ), $(call lp.help.add-builtin-target, compile ............, tsc   ))
+$(if $(call lp.format.is-enabled     ), $(call lp.help.add-builtin-target, format ............., format))
+$(if $(call lp.help.is-enabled       ), $(call lp.help.add-builtin-target, help ..............., help  ))
+$(if $(call lp.test.is-enabled       ), $(call lp.help.add-builtin-target, test ..............., test   ))
+$(if $(call lp.tsc.is-enabled        ), $(call lp.help.add-builtin-target, tsc ................, tsc   ))
+$(if $(call lp.uplift.is-enabled     ), $(call lp.help.add-builtin-target, uplift ............., uplift))
+$(if $(call lp.diagnostics.is-enabled), $(call lp.help.add-target        , <target>.help ......, show diagnostic information (aliases: $(sort $(call lp.diagnostics.get-target-names)))))
+
+$(foreach name, $(call lp.help.get-phony-targets), lp.$(name)) : ;
+	$(call lp.help.print-targets)
+
+ifeq "$(call lp.help.is-enabled)" "true"
+    $(call lp.fn.publicize-phony-targets, help)
+endif
+
+#-----------------------------------------------------------------------------------------------------------------------
+#
+#   ########  ####    ###     ######   ##    ##  #######   ######  ######## ####  ######   ######
+#   ##     ##  ##    ## ##   ##    ##  ###   ## ##     ## ##    ##    ##     ##  ##    ## ##    ##
+#   ##     ##  ##   ##   ##  ##        ####  ## ##     ## ##          ##     ##  ##       ##
+#   ##     ##  ##  ##     ## ##   #### ## ## ## ##     ##  ######     ##     ##  ##        ######
+#   ##     ##  ##  ######### ##    ##  ##  #### ##     ##       ##    ##     ##  ##             ##
+#   ##     ##  ##  ##     ## ##    ##  ##   ### ##     ## ##    ##    ##     ##  ##    ## ##    ##
+#   ########  #### ##     ##  ######   ##    ##  #######   ######     ##    ####  ######   ######
+#
+#-----------------------------------------------------------------------------------------------------------------------
+
+$(foreach feature, tsc test bundle format uplift clean, \
+	$(foreach target, $(call lp.$(feature).get-phony-targets), \
+        $(foreach shortcut, $(call lp.diagnostics.get-target-names), \
+		        $(eval $(call lp.fn.create-diagnostics-target,$(strip $(target)),$(strip $(shortcut)))) \
+         ) \
+	 ) \
+ )
+
+#-----------------------------------------------------------------------------------------------------------------------
+#
+#     ######   #######  ##     ## ########  #### ##       ########
+#    ##    ## ##     ## ###   ### ##     ##  ##  ##       ##
+#    ##       ##     ## #### #### ##     ##  ##  ##       ##
+#    ##       ##     ## ## ### ## ########   ##  ##       ######
+#    ##       ##     ## ##     ## ##         ##  ##       ##
+#    ##    ## ##     ## ##     ## ##         ##  ##       ##
+#     ######   #######  ##     ## ##        #### ######## ########
+#
+#-----------------------------------------------------------------------------------------------------------------------
+
+ifeq "$(call lp.tsc.is-enabled)" "true" # ......................................................... compiling is enabled
+
+$(call lp.fn.declare-phony-targets, tsc, $(call lp.tsc.get-targets))
+
+$(call lp.tsc.get-targets) : $$(call lp.tsc.get-prerequisites)
+	$(call lp.tsc.get-command-with-hooks, Compiling...)
+
+else # ........................................................................................... compiling is disabled
+
+.PHONY: $(foreach name, $(call lp.tsc.get-phony-targets), lp.$(name))
+
+$(foreach name, $(call lp.tsc.get-phony-targets), lp.$(name)) : ;
+    ifeq "$(strip $(call lp.tsc.get-command-with-hooks))" ""
+		$(error Compiling is disabled/not configured)
+    else
+		$(call lp.tsc.get-command-with-hooks, Compiling...)
+    endif
+
+endif
+
+#-----------------------------------------------------------------------------------------------------------------------
+#
+#   ######## ########  ######  ########
+#      ##    ##       ##    ##    ##
+#      ##    ##       ##          ##
+#      ##    ######    ######     ##
+#      ##    ##             ##    ##
+#      ##    ##       ##    ##    ##
+#      ##    ########  ######     ##
+#
+#-----------------------------------------------------------------------------------------------------------------------
+
+ifeq "$(call lp.test.is-enabled)" "true" # ............................................................ test are enabled
+
+.PHONY: $(foreach name, $(call lp.test.get-phony-targets), lp.$(name) $(name))
+
+$(foreach name, $(call lp.test.get-phony-targets), lp.$(name) $(name)) : | $$(call lp.test.get-prerequisites);
+	$(call lp.test.get-command-with-hooks, Running tests...)
+
+$(call lp.test.get-targets) : $$(call lp.test.get-prerequisites)
+	$(call lp.test.get-command-with-hooks, Running tests...)
+
+else # .............................................................................................. tests are disabled
+
+.PHONY: $(foreach name, $(call lp.test.get-phony-targets), lp.$(name))
+
+$(foreach name, $(call lp.test.get-phony-targets), lp.$(name)) : | $$(call lp.test.get-prerequisites);
+    ifeq "$(strip $(call lp.test.get-command-with-hooks))" ""
+		$(error Testing is disabled)
+    else
+		$(call lp.test.get-command-with-hooks, Running tests...)
+    endif
+
+endif
+
+#-----------------------------------------------------------------------------------------------------------------------
+#
+#    ########  ##     ## ##    ## ########  ##       ########
+#    ##     ## ##     ## ###   ## ##     ## ##       ##
+#    ##     ## ##     ## ####  ## ##     ## ##       ##
+#    ########  ##     ## ## ## ## ##     ## ##       ######
+#    ##     ## ##     ## ##  #### ##     ## ##       ##
+#    ##     ## ##     ## ##   ### ##     ## ##       ##
+#    ########   #######  ##    ## ########  ######## ########
+#
+#-----------------------------------------------------------------------------------------------------------------------
+
+ifeq "$(call lp.bundle.is-enabled)" "" # .......................................................... bundling is disabled
+
+.PHONY: lp.bundle
+
+lp.bundle : ;
+	$(error Bundling is disabled)
+
+else ifeq "$(call lp.bundle.get-targets)" "" # .............................................. no bundles have been added
+
+$(call lp.fn.declare-phony-targets, bundle, lp.bundle)
+
+lp.bundle :
+	$(error No bundles have been defined via lp.bundle.add
+
+else # ........................................................................................... bundles are available
+
+$(call lp.fn.declare-phony-targets, bundle, $(call lp.bundle.get-targets))
+
+endif
+
+#-----------------------------------------------------------------------------------------------------------------------
+#
+#    ########  #######  ########  ##     ##    ###    ########
+#    ##       ##     ## ##     ## ###   ###   ## ##      ##
+#    ##       ##     ## ##     ## #### ####  ##   ##     ##
+#    ######   ##     ## ########  ## ### ## ##     ##    ##
+#    ##       ##     ## ##   ##   ##     ## #########    ##
+#    ##       ##     ## ##    ##  ##     ## ##     ##    ##
+#    ##        #######  ##     ## ##     ## ##     ##    ##
+#
+#-----------------------------------------------------------------------------------------------------------------------
+
+ifeq "$(call lp.format.is-enabled)" "" # ........................................................ formatting is disabled
+
+.PHONY: $(foreach name, $(call lp.format.get-phony-targets), lp.$(name))
+
+$(foreach name, $(call lp.format.get-phony-targets), lp.$(name)) : ;
+	$(if $(call lp.format.get-command-with-hooks), \
+	     $(call lp.format.get-command-with-hooks, Formatting...), \
+	     $(error No paths to format have been configured)\
+	 )
+
+else # ........................................................................................... formatting is enabled
+
+$(call lp.fn.declare-phony-targets, format, lp.internal.format)
+
+lp.internal.format :
+	$(if $(call lp.format.get-command-with-hooks), \
+	     $(call lp.format.get-command-with-hooks, Formatting...), \
+	     $(error No paths to format have been configured)\
+	 )
+
+endif
+
+#-----------------------------------------------------------------------------------------------------------------------
+#
+#   ##     ## ########  ##       #### ######## ########
+#   ##     ## ##     ## ##        ##  ##          ##
+#   ##     ## ##     ## ##        ##  ##          ##
+#   ##     ## ########  ##        ##  ######      ##
+#   ##     ## ##        ##        ##  ##          ##
+#   ##     ## ##        ##        ##  ##          ##
+#    #######  ##        ######## #### ##          ##
+#
+#-----------------------------------------------------------------------------------------------------------------------
+
+ifeq "$(call lp.uplift.is-enabled)" "true" # ........................................................ uplift is enabled
+
+$(call lp.fn.declare-phony-targets, uplift, lp.internal.uplift)
+
+lp.internal.uplift :
+	$(call lp.uplift.get-command-with-hooks, Uplifting...)
+
+else # .............................................................................................. uplift is disabled
+
+.PHONY: $(foreach name, $(call lp.uplift.get-phony-targets), lp.$(name))
+
+$(foreach name, $(call lp.uplift.get-phony-targets), lp.$(name)) : ;
+		$(call lp.uplift.get-command-with-hooks, Uplifting...)
+
+endif
+
+#-----------------------------------------------------------------------------------------------------------------------
+#
+#     ######  ##       ########    ###    ##    ##
+#    ##    ## ##       ##         ## ##   ###   ##
+#    ##       ##       ##        ##   ##  ####  ##
+#    ##       ##       ######   ##     ## ## ## ##
+#    ##       ##       ##       ######### ##  ####
+#    ##    ## ##       ##       ##     ## ##   ###
+#     ######  ######## ######## ##     ## ##    ##
+#
+#-----------------------------------------------------------------------------------------------------------------------
+
+ifeq "$(call lp.clean.is-enabled)" "true" # ........................................................ cleaning is enabled
+
+$(call lp.fn.declare-phony-targets, clean, lp.internal.clean)
+
+lp.internal.clean :
+    ifeq "$(call lp.clean.get-default-command)" "$(call lp.clean.get-effective-command)"
+		$(if $(wildcard $(call lp.clean.get-files)), $(call lp.clean.get-effective-command))
+    else
+		$(call lp.clean.get-effective-command)
+    endif
+
+else # ............................................................................................ cleaning is disabled
+
+.PHONY: $(foreach name, $(call lp.clean.get-phony-targets), lp.$(name))
+
+$(foreach name, $(call lp.clean.get-phony-targets), lp.$(name)) : ;
+    ifeq "$(strip $(call lp.clean.get-command-with-hooks))" ""
+		$(error Cleaning is disabled)
+    else
+        ifeq "$(call lp.clean.get-default-command)" "$(call lp.clean.get-effective-command)"
+			$(if $(wildcard $(call lp.clean.get-files)), $(call lp.clean.get-effective-command))
+        else
+			$(call lp.clean.get-effective-command)
+        endif
+    endif
+endif
+

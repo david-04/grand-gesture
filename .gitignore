@@ -3,3 +3,17 @@
 /dist
 /resources/hero-image-*.png
 !/resources/hero-image-github-readme-banner.png
+/dist/**/*.cjs
+/dist/**/*.cjs.map
+/dist/**/*.d.cjs
+/dist/**/*.d.js
+/dist/**/*.d.jsx
+/dist/**/*.d.mjs
+/dist/**/*.js
+/dist/**/*.js.map
+/dist/**/*.jsx
+/dist/**/*.jsx.map
+/dist/**/*.mjs
+/dist/**/*.mjs.map
+/dist/.tsbuildinfo
+/dist/.timestamp.*

@@ -1,21 +1,21 @@
-define HELP
+include .launchpad/Makefile.header # see .launchpad/Makefile.documentation
+#-----------------------------------------------------------------------------------------------------------------------
 
-	begin ..... start translation (alias: begin-translation)
-	end ....... finish translation (alias: end-translation)
-	format .... format the code
-	release ... assemble the release
+autorun: ;
 
-endef
-
-$(call dc.lint, biome format --write)
-
-autorun format: lint;
-
+$(call lp.help.add-phony-target, begin, .............. start a translation)
 begin begin-translation :
 	tsx bin/locales.ts begin-translation
 
+$(call lp.help.add-phony-target, end, ................ end the translation)
 end end-translation :
 	tsx bin/locales.ts end-translation
 
+$(call lp.help.add-phony-target , release, ............ zip a release)
 release:
 	. bin/assemble-release.sh
+
+$(call lp.tsc.disable)
+
+#-----------------------------------------------------------------------------------------------------------------------
+include .launchpad/Makefile.footer
