@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.0.2](https://github.com/david-04/grand-gesture/releases/tag/v1.0.2) (2025-07-10)
+
+- Added retries for when a page fails to connect to the background
+
 ## [1.0.1](https://github.com/david-04/grand-gesture/releases/tag/v1.0.1) (2025-07-03)
 
 - Tweaked error handling

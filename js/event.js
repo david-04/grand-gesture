@@ -1241,14 +1241,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 async function main() {
     for (; ; await new Promise(resolve => setTimeout(resolve, 200))) {
         try {
-            chrome.runtime.sendMessage(extID, { type: "evt_getconf" }, response => {
-                if (response) {
-                    config = response.config;
-                    devMode = response.devMode;
-                    sue.cons.os = response.os;
-                    sue.init();
-                }
-            });
+            const response = await chrome.runtime.sendMessage(extID, { type: "evt_getconf" });
+            if (response) {
+                console.log("[grand-gesture] Received config");
+                config = response.config;
+                devMode = response.devMode;
+                sue.cons.os = response.os;
+                sue.init();
+            }
             return;
         } catch {}
     }
