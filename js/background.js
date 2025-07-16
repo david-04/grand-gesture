@@ -1704,17 +1704,17 @@ var sub = {
             sub.checkPermission(thepers, theorgs, theFunction);
         },
         switchtab: async () => {
-            var id = await sub.getId(sub.getConfValue("selects", "n_tab_lrhl"))[0];
+            const id = (await sub.getId(sub.getConfValue("selects", "n_tab_lrhl")))[0];
+
             //fix contextmenu from switchtab by rges or wges
             if (
                 (sub.message.type === "action_wges" || sub.message.type === "action_rges") &&
                 sub.message.sendValue.buttons === 2
             ) {
-                chrome.tabs.sendMessage(id, { type: "fix_switchtab", value: "contextmenu" }, response => {
-                    chrome.tabs.update(id, { active: true });
-                });
+                await chrome.tabs.sendMessage(id, { type: "fix_switchtab", value: "contextmenu" });
+                await chrome.tabs.update(id, { active: true });
             } else {
-                chrome.tabs.update(id, { active: true });
+                await chrome.tabs.update(id, { active: true });
             }
         },
         move: () => {
@@ -1778,9 +1778,9 @@ var sub = {
                             case "s_tabele_title":
                                 return cptarget.title;
                             case "s_tabele_url":
-                                return (clipOBJ.value = cptarget.url);
+                                return cptarget.url;
                             case "s_tabele_aslnk":
-                                return (clipOBJ.value = '<a href="' + cptarget.url + '">' + cptarget.title + "</a>");
+                                return '<a href="' + cptarget.url + '">' + cptarget.title + "</a>";
                         }
                         return undefined;
                     })();

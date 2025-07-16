@@ -1,8 +1,13 @@
 # Change Log
 
+## [1.0.3](https://github.com/david-04/grand-gesture/releases/tag/v1.0.3) (2025-07-16)
+
+- Fixed an issue that caused the "switch to left/right/first/last tab" action to fail
+- Fixed an issue that caused the "copy page URL" action to fail
+
 ## [1.0.2](https://github.com/david-04/grand-gesture/releases/tag/v1.0.2) (2025-07-10)
 
-- Added retries for when a page fails to connect to the background
+- Added retries for when a page fails to connect to the background script
 
 ## [1.0.1](https://github.com/david-04/grand-gesture/releases/tag/v1.0.1) (2025-07-03)
 
